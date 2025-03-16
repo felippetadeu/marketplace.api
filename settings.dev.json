@@ -1,0 +1,12 @@
+{
+    "application": {
+        "name": "Marketplace",
+        "default_logger": "console"
+    },
+    "logging": {
+        "console": {
+            "level": 10,
+            "formatter": "%(asctime)s - %(levelname)s - %(message)s"
+        }
+    }
+}
