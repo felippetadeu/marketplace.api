@@ -1,6 +1,6 @@
 {
     "application": {
-        "name": "Marketplace",
+        "name": "Worflow",
         "default_logger": "console"
     },
     "logging": {

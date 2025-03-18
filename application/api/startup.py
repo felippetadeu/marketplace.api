@@ -9,9 +9,12 @@ import uvicorn
 class Startup:
     async def run(self) -> None:
         from fastapi import FastAPI
-        app = FastAPI(openapi_tags=tags_metadata)
-        Configuration.app = app
         api_controller = Configuration.get_env('API_CONTROLLER')
+        tags = []
+        if api_controller in tags_metadata:
+            tags = tags_metadata[api_controller]
+        app = FastAPI(openapi_tags=tags)
+        Configuration.app = app
         await self.import_all_modules(f"application.api.common")
 
         if api_controller is not None:
