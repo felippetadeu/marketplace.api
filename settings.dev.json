@@ -4,9 +4,15 @@
         "default_logger": "console"
     },
     "logging": {
-        "console": {
-            "level": 10,
-            "formatter": "%(asctime)s - %(levelname)s - %(message)s"
+        "level":"DEBUG",
+        "handlers": [
+            {
+                "class": "StreamHandler",
+                "formatter": "%(asctime)s - %(levelname)s - %(message)s"
+            }
+        ],
+        "teams_channel": {
+            "webhook_url": "https://outlook.office.com/webhook/..."
         }
     }
 }
